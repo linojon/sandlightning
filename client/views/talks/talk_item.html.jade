@@ -3,4 +3,5 @@ template(name='talkItem')
     .talk-content
       h3
         a(href="#{url}") #{title}
-        span #{author}
+      span #{author}
+    a.discuss.btn(href="{{pathFor 'talkPage'}}") Discuss

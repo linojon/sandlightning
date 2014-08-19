@@ -1,6 +1,9 @@
 {
   "packages": {
     "jade": {},
-    "iron-router": {}
+    "iron-router": {
+      "version": "0.8.2"
+    },
+    "spin": {}
   }
 }
