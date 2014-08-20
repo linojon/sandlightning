@@ -1,3 +1,3 @@
 Template.talksList.helpers
   talks: ->
-    Talks.find()
+    Talks.find {}, {sort: {submitted: -1}}
