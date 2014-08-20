@@ -4,6 +4,7 @@
     "iron-router": {
       "version": "0.8.2"
     },
-    "spin": {}
+    "spin": {},
+    "accounts-ui-bootstrap-dropdown": {}
   }
 }
