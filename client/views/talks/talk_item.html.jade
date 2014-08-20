@@ -3,5 +3,8 @@ template(name='talkItem')
     .talk-content
       h3
         a(href="#{url}") #{title}
-      span #{author}
+      p
+        span #{author}
+        if ownPost
+          a(href="{{pathFor 'talkEdit'}}") Edit
     a.discuss.btn(href="{{pathFor 'talkPage'}}") Discuss

@@ -1,0 +1,26 @@
+template(name="talkEdit")
+  h3 Editing
+  form.main
+    .control-group
+      label.control-label(for="title") Title
+      .controls
+        input(name="title", type="text", value="{{title}}", placeholder="Name of the presentation")
+    .control-group
+      label.control-label(for="author") Presenter
+      .controls
+        input(name="author", type="text", value="{{author}}", placeholder="Who's presentation")
+    .control-group
+      label.control-label(for="url") URL
+      .controls
+        input(name="url", type="text", value="{{url}}", placeholder="YouTube URL")
+    .control-group
+      label.control-label(for="description") Description 
+      textarea(name="description")
+        {{description}}
+    .control-group
+      .controls
+        input.btn.btn-primary(type="submit", value="Submit")
+    .control-group
+      .controls
+        a.btn.btn-danger.delete(href='#') Delete talk
+ 

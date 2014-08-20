@@ -6,6 +6,16 @@
 #     !! userId
 # )
 
+Talks.allow
+  update: ownsDocument
+  remove: ownsDocument
+
+Talks.deny
+  update: (userId, talk, fieldNames) ->
+    # may only edit these fields
+    _.without(fieldNames, 'url', 'title', 'author', 'description').length > 0
+  
+
 Meteor.methods(
   talk: (talkAttributes) ->
     user = Meteor.user()

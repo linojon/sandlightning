@@ -11,6 +11,11 @@ Router.map ->
     data: -> Talks.findOne this.params._id
   }
 
+  this.route 'talkEdit', {
+    path: '/talks/:_id/edit',
+    data: -> Talks.findOne this.params._id
+  }
+
   this.route 'talkSubmit', {
     path: '/submit'
   }
