@@ -31,3 +31,5 @@ requireLogin = (pause) ->
 Router.onBeforeAction 'loading'
 
 Router.onBeforeAction requireLogin, {only: 'talkSubmit'}
+
+Router.onBeforeAction -> clearErrors()

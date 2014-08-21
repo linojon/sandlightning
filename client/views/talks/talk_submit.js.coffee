@@ -11,7 +11,10 @@ Template.talkSubmit.events
 
     Meteor.call 'talk', talk, (error, id) ->
       if error
-        return alert error.reason
-        
-    Router.go 'talksList'
+        # show error to user
+        throwError error.reason
+        if error.error == 302
+          Router.go 'talkPage', {_id: error.details}
+      else
+        Router.go 'talkPage', {_id: id}
 
