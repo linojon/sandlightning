@@ -1,0 +1,19 @@
+template(name='header2')
+  nav.navbar.navbar-default
+    .container
+      .navbar-header
+        button.btn.btn-navbar(type='button', data-toggle='collapse', data-target='.nav-collapse')
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+
+      a.brand(href="{{pathFor 'talksList'}}") Sandlightning
+
+      .nav-collapse.collapse
+        ul.nav
+          if currentUser
+            li
+              a(href="{{pathFor 'talkSubmit'}}") Create Talk
+        ul.nav.pull-right
+          li
+            +loginButtons
