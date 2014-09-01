@@ -1,10 +1,10 @@
 Router.configure(
-  layoutTemplate: 'layout'
+  layoutTemplate: 'application'
   loadingTemplate: 'loading'
   waitOn: -> Meteor.subscribe 'talks'
 )
 Router.map -> 
-  this.route 'talksList', {path: '/'}
+  # this.route 'talksList', {path: '/'}
 
   this.route 'talkPage',  {
     path: '/talks/:_id'
@@ -18,6 +18,17 @@ Router.map ->
 
   this.route 'talkSubmit', {
     path: '/submit'
+  }
+
+  #####
+  this.route 'home', {
+    layoutTemplate: 'page'
+    path: '/'
+  }
+
+  this.route 'about', {
+    layoutTemplate: 'page'
+    path: '/about'
   }
 
 requireLogin = (pause) ->
