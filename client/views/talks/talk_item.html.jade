@@ -2,9 +2,9 @@ template(name='talkItem')
   .talk
     .talk-content
       h3
-        a(href="#{url}") #{title}
+        a(href="{{pathFor 'talkShow'}}") #{title}
       p
-        span #{author}
+        span {{author}}
         //- if ownPost
         //-   a(href="{{pathFor 'talkEdit'}}") Edit
     //- a.discuss.btn(href="{{pathFor 'talkPage'}}") Discuss

@@ -1,18 +1,21 @@
 template(name='header')
-  header.navbar
-    .navbar-inner
-      a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
-        span.icon-bar
-        span.icon-bar
-        span.icon-bar
+  nav.navbar.navbar-default
+    .container
+      .navbar-header
+        a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
 
-      a.brand(href="{{pathFor 'home'}}") Sandlightning
+      a.brand(href="{{pathFor 'homePage'}}") Sandlightning
 
       .nav-collapse.collapse
         ul.nav
-          if currentUser
-            li
-              a(href="{{pathFor 'talkSubmit'}}") Create Talk
+          li
+            a(href="{{pathFor 'forumsList'}}") Forums
+        //-   if currentUser
+        //-     li
+        //-       a(href="{{pathFor 'talkSubmit'}}") Create Talk
         ul.nav.pull-right
           li
             +loginButtons

@@ -1,8 +1,11 @@
-Meteor.publish 'talks', ->
-  Talks.find() # todo: scope by forum_id
-
 Meteor.publish 'forums', ->
   Forums.find()
 
-console.log "HEHEHEHEHEHE"
-console.log Forums.find().fetch() 
+Meteor.publish 'singleForum', (id) ->
+  id && Forums.find(id)
+
+Meteor.publish 'talks', (forumId) ->
+  Talks.find(forumId: forumId)
+
+Meteor.publish 'singleTalk', (id) ->
+  id && Talks.find(id) 

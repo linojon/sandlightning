@@ -5,6 +5,6 @@ template(name='forumsList')
 
 
 template(name="forumsItem")
-  a.list-group-item.bg-info(href="{{pathFor forum}}" style="background-color: #d9edf7")
+  a.list-group-item.bg-info(href="{{pathFor 'forumShow'}}" style="background-color: #d9edf7")
     h4.list-group-item-heading {{title}}
     p {{date}}

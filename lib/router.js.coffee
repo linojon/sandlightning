@@ -7,7 +7,7 @@ Router.configure(
 Router.map -> 
   this.route 'talksList', {path: '/talks'}
 
-  this.route 'talkPage',  {
+  this.route 'talkShow',  {
     path: '/talks/:_id'
     data: -> Talks.findOne this.params._id
   }
@@ -22,21 +22,33 @@ Router.map ->
   # }
 
   #####
-  this.route 'home', {
-    layoutTemplate: 'page'
+  this.route 'homePage', {
+    layoutTemplate: 'pages'
     path: '/'
-    waitOn: ->  Meteor.subscribe 'forums'
+    waitOn: ->  
+      Meteor.subscribe 'forums'
   }
 
-  this.route 'forums', {
-    path: '/forums'
-    waitOn: ->  Meteor.subscribe 'forums'
-  }
-
-  this.route 'about', {
-    layoutTemplate: 'page'
+  this.route 'aboutPage', {
+    layoutTemplate: 'pages'
     path: '/about'
   }
+
+  this.route 'forumsList', {
+    path: '/forums'
+    waitOn: ->  
+      Meteor.subscribe 'forums'
+  }
+
+  this.route 'forumShow', {
+    path: '/forums/:_id'
+    data: -> 
+      Forums.findOne this.params._id
+    waitOn: -> 
+      Meteor.subscribe 'forums'
+      Meteor.subscribe 'talks', this.params._id
+  }
+
 
 requireLogin = (pause) ->
   if !Meteor.user()
