@@ -2,7 +2,7 @@ template(name='header2')
   nav.navbar.navbar-default
     .container
       .navbar-header
-        button.btn.btn-navbar(type='button', data-toggle='collapse', data-target='.nav-collapse')
+        a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
           span.icon-bar
           span.icon-bar
           span.icon-bar
@@ -11,9 +11,11 @@ template(name='header2')
 
       .nav-collapse.collapse
         ul.nav
-          if currentUser
-            li
-              a(href="{{pathFor 'talkSubmit'}}") Create Talk
+          li
+            a(href="{{pathFor 'forums'}}") Forums
+        //-   if currentUser
+        //-     li
+        //-       a(href="{{pathFor 'talkSubmit'}}") Create Talk
         ul.nav.pull-right
           li
             +loginButtons

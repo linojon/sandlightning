@@ -1,13 +1,10 @@
 template(name='forumsList')
-  .forums
-    h2 Featured Forums
+  .forums.list-group
     each forums
-      p HELLO
-      //- +forumsItem
+      +forumsItem
 
 
-//- template(name="forumsItem")
-//-   .forums_item
-//-     //- a(href="{{pathFor forum}}") {{title}}
-//-     //- {{date}}
-//-     {{title}}
+template(name="forumsItem")
+  a.list-group-item.bg-info(href="{{pathFor forum}}" style="background-color: #d9edf7")
+    h4.list-group-item-heading {{title}}
+    p {{date}}

@@ -1,15 +1,16 @@
 Router.configure(
   layoutTemplate: 'application'
   loadingTemplate: 'loading'
-  # waitOn: -> Meteor.subscribe ['forums', 'talks']
+  waitOn: -> 
+    Meteor.subscribe 'talks'
 )
 Router.map -> 
-  # this.route 'talksList', {path: '/'}
+  this.route 'talksList', {path: '/talks'}
 
-  # this.route 'talkPage',  {
-  #   path: '/talks/:_id'
-  #   data: -> Talks.findOne this.params._id
-  # }
+  this.route 'talkPage',  {
+    path: '/talks/:_id'
+    data: -> Talks.findOne this.params._id
+  }
 
   # this.route 'talkEdit', {
   #   path: '/talks/:_id/edit',
@@ -24,6 +25,12 @@ Router.map ->
   this.route 'home', {
     layoutTemplate: 'page'
     path: '/'
+    waitOn: ->  Meteor.subscribe 'forums'
+  }
+
+  this.route 'forums', {
+    path: '/forums'
+    waitOn: ->  Meteor.subscribe 'forums'
   }
 
   this.route 'about', {

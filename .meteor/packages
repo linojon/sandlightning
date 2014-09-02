@@ -6,8 +6,9 @@
 standard-app-packages
 bootstrap
 coffeescript
-jade
-iron-router
-spin
-accounts-ui-bootstrap-dropdown
+sacha:spin@2.0.4
+mrt:accounts-ui-bootstrap-dropdown@0.8.3
 accounts-password
+blaze
+iron:router
+waitingkuo:jade
