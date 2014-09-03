@@ -2,8 +2,11 @@ template(name="talkShow")
   .row
     .col-md-12
       p
-        a(href="{{pathFor 'forumShow'}}") &larr; back
+        a(href="{{pathFor 'forumShow' _id=forumId}}") &larr; back to {{forum.title}}
       .embed-responsive.embed-responsive-4by3
-        <iframe class="embed-responsive-item" src="//www.youtube.com/embed/fuSBd--tWic" width="640" height="390" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" src="//www.youtube.com/embed/{{yt_id}}" width="640" height="390" allowfullscreen></iframe>
       h1 {{title}}
       h3 {{author}}
+      p
+        small 
+          em If you'd like to leave a comment or upvote this video, please click the small YouTube button at bottom right.

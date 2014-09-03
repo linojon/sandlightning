@@ -1,10 +1,9 @@
 template(name='talkItem')
-  .talk
-    .talk-content
-      h3
-        a(href="{{pathFor 'talkShow'}}") #{title}
-      p
-        span {{author}}
-        //- if ownPost
-        //-   a(href="{{pathFor 'talkEdit'}}") Edit
-    //- a.discuss.btn(href="{{pathFor 'talkPage'}}") Discuss
+  .talk.col-sm-6.col-md-4
+    .talk-content.thumbnail
+      img(src="http://img.youtube.com/vi/{{yt_id}}/0.jpg")
+      .caption(style="height:150px")
+        h3
+          a(href="{{pathFor 'talkShow'}}") #{title}
+        p
+          span {{author}}

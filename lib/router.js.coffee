@@ -10,6 +10,9 @@ Router.map ->
   this.route 'talkShow',  {
     path: '/talks/:_id'
     data: -> Talks.findOne this.params._id
+    waitOn: ->
+      # Meteor.subscribe 'singleTalk', this.params._id
+      # Meteor.subscribe 'talks'
   }
 
   # this.route 'talkEdit', {

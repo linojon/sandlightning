@@ -1,0 +1,11 @@
+ul.rules li {
+  margin-bottom: 1em;
+}
+
+nav.navbar {
+  /*background-image: url(/204185.jpg);*/ /* url(/Fulgurite-branch.jpg);  url(/EB0713FULG1D.jpg); */
+/*  background-size: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;*/
+  background-color: #231c14;
+}

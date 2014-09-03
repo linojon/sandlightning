@@ -3,11 +3,12 @@ template(name="homePage")
     .row
       .col-sm-6.col-sm-offset-3(style="text-align:center")
         p(style="text-align: left") Q. What's more fun than charades or just sitting around drinking beers at the beach house? 
-        p(style="text-align: left; font-weight: bold") A. An evening of short "lighting talk" presentations on interesting topics by your family and friends!
+        p(style="text-align: left; font-weight: bold") A. An evening of short "lighting talk" presentations by your family and friends!
         a.btn.btn-primary.btn-block(href="{{pathFor 'aboutPage'}}") Learn More
 
   .spacer
 
-  h2 Featured Forums
-  +forumsList
+  .well
+    h2 Featured Forums
+    +forumsList
 
