@@ -1,2 +1,4 @@
 Template.talkShow.helpers
-  forum: -> Forums.findOne( _id: this.forumId )
+  forum: -> 
+    console.log this.forumId
+    Forums.findOne( this.forumId )

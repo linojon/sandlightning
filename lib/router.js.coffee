@@ -13,6 +13,8 @@ Router.map ->
     waitOn: ->
       # Meteor.subscribe 'singleTalk', this.params._id
       # Meteor.subscribe 'talks'
+      # Meteor.subscribe 'singleForum', 
+      Meteor.subscribe 'forums'
   }
 
   # this.route 'talkEdit', {

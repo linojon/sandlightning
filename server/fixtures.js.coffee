@@ -62,7 +62,7 @@ if Talks.find().count() == 0
   )
   Talks.insert(
     title: "I'm Building a Church in Uganda"
-    author: 'Irene'
+    author: 'Irene Naykama'
     yt_id: '_Rz9jO_wqJI' 
     forumId: forum._id
     position: 8

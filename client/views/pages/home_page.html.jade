@@ -1,10 +1,15 @@
 template(name="homePage")
   .container
     .row
-      .col-sm-6.col-sm-offset-3(style="text-align:center")
-        p(style="text-align: left") Q. What's more fun than charades or just sitting around drinking beers at the beach house? 
-        p(style="text-align: left; font-weight: bold") A. An evening of short "lighting talk" presentations by your family and friends!
-        a.btn.btn-primary.btn-block(href="{{pathFor 'aboutPage'}}") Learn More
+      .col-sm-8
+        p(style="text-align: left; font-size: larger; font-style: italic") Q. What's more fun than charades or sitting around drinking beers at the beach house? 
+        p(style="text-align: left; font-weight: bold; font-size: larger") A. An evening of short "lighting talk" presentations by your family and friends!
+        p
+          a.btn.btn-primary.btn-block(href="{{pathFor 'aboutPage'}}") Learn More
+      .col-sm-4
+        .embed-responsive.embed-responsive-4by3
+          <iframe class="embed-responsive-item" src="//www.youtube.com/embed/A8pMb9JMKg0?autohide=1&showinfo=0&rel=0" width="640" height="390" allowfullscreen></iframe>
+
 
   .spacer
 
