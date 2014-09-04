@@ -10,3 +10,6 @@ Template.talkShow.helpers
   prevTalk: ->
     if this.position > 0
       Talks.findOne( position: this.position-1 )
+
+  comments: ->
+    Comments.find( talkId: this._id )

@@ -11,7 +11,7 @@ if Forums.find().count() == 0
 
 if Talks.find().count() == 0
   forum = Forums.findOne()
-  Talks.insert(
+  breadId = Talks.insert(
     title: 'How to Bake French Bread'
     author: 'Jonathan Linowes'
     yt_id: 'fuSBd--tWic' 
@@ -52,7 +52,7 @@ if Talks.find().count() == 0
     yt_id: 'lxTSor94vfg' 
     forumId: forum._id
     position: 6
- )
+  )
   Talks.insert(
     title: 'The Proper Way to Sit and Stand'
     author: 'Steven Linowes'
@@ -94,4 +94,20 @@ if Talks.find().count() == 0
     yt_id: 'SUliUb5_ERY' 
     forumId: forum._id
     position: 12
+  )
+
+  # fake comments
+  now = new Date().getTime()
+  joeId = Meteor.users.insert(
+    profile: { name: 'Joe Example'}
+  )
+  joe = Meteor.users.findOne joeId
+
+  Comments.insert(
+    talkId: breadId
+    userId: joeId
+    author: joe.profile.name
+    submittedAt: now - 5 * 3600 * 1000
+    body: 'Very interesting and yummy!'
+
   )

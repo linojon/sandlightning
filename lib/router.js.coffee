@@ -2,8 +2,12 @@ Router.configure(
   layoutTemplate: 'application'
   loadingTemplate: 'loading'
   waitOn: -> 
-    Meteor.subscribe 'talks'
+    [
+      Meteor.subscribe('talks'), # todo: for forumId
+      Meteor.subscribe('comments') # todo: add commentsCount attribute to talk
+    ]
 )
+
 Router.map -> 
   this.route 'talksList', {path: '/talks'}
 
@@ -14,7 +18,11 @@ Router.map ->
       # Meteor.subscribe 'singleTalk', this.params._id
       # Meteor.subscribe 'talks'
       # Meteor.subscribe 'singleForum', 
-      Meteor.subscribe 'forums'
+      # Meteor.subscribe('forums')
+      [
+        Meteor.subscribe('forums'),
+        Meteor.subscribe('comments', {talkId: this.params_id})
+      ]
   }
 
   # this.route 'talkEdit', {

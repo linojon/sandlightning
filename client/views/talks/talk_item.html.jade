@@ -3,7 +3,9 @@ template(name='talkItem')
     .talk-content.thumbnail.well
       a(href="{{pathFor 'talkShow'}}") 
         img(src="http://img.youtube.com/vi/{{yt_id}}/mqdefault.jpg")
-        .caption(style="height:150px")
-          h3 {{title}}
+        .caption(style="height:120px")
+          h4 {{title}}
           p
             span {{author}}
+            if commentsPresent 
+              span.small ({{commentsCount}} comments)
