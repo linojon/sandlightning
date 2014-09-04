@@ -7,13 +7,9 @@ ul.rules li {
   text-decoration: none !important;
   color: #428BCA !important;
 }
-/*nav.navbar {
-  background-color: #231c14;
-}*/
 
-/*nav.navbar {
-*/  /*background-image: url(/204185.jpg);*/ /* url(/Fulgurite-branch.jpg);  url(/EB0713FULG1D.jpg); */
-/*  background-size: 100%;
-  background-position: center center;
-  background-repeat: no-repeat;*/
-/*}*/
+#footer {
+  margin-top: 6em;
+  padding-top: 1em;
+  border-top: 1px solid #888;
+}

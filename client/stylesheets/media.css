@@ -11,7 +11,7 @@ body, h1, h2, h3, h4, h5, h6 {
   border-radius: 3em;
 }
 .navbar {
-  background: transparent;
+  /*background: transparent;*/
   border: none;
   padding: 0.5em 0;
   margin-bottom: 0;
@@ -61,21 +61,25 @@ body, h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 .jumbotron h1 {
-  background: #fff;
+  /*background: #fff;*/
+  color: #fff;
   display: inline-block;
-  font-size: 1.5em;
+  /*font-size: 1.5em;*/
+  font-size: 3em;
   margin-bottom: 0;
-  padding: 0.5em;
+  /*padding: 0.5em;*/
   text-transform: uppercase;
   font-weight: bold;
 }
 .jumbotron h2 {
-  background: #fff;
-  color: #333;
+  /*background: #fff;*/
+  /*color: #333;*/
+  color: #ddd;
   display: inline-block;
-  font-size: 1.2em;
+  /*font-size: 1.2em;*/
+  font-size: 2em;
   font-weight: normal;
-  padding: 0.25em 0.75em;
+  /*padding: 0.25em 0.75em;*/
   line-height: 1.4em;
   max-width: 75%;
 }
@@ -98,8 +102,12 @@ footer {
   .feature-photo {
     margin: 0.1em 0;
   }
+  .jumbotron h1 {
+    font-size: 2em;
+  }
   .jumbotron h2 {
     max-width: 100%;
+    font-size: 1.5em;
   }
   .navbar ul.nav li {
     text-align: center;

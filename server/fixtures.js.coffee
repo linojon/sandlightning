@@ -26,7 +26,7 @@ if Talks.find().count() == 0
     position: 2
   )
   Talks.insert(
-    title: 'My 92 Happy Years Begets Yours'
+    title: 'My 92 Happy Years Beget Yours'
     author: 'Dorothy Linowes'
     yt_id: '9ts3ojDRxiU' 
     forumId: forum._id
@@ -61,7 +61,7 @@ if Talks.find().count() == 0
     position: 7
   )
   Talks.insert(
-    title: "I'm Building a Church in Uganda"
+    title: "We're Building a Church in Rural Uganda"
     author: 'Irene Naykama'
     yt_id: '_Rz9jO_wqJI' 
     forumId: forum._id

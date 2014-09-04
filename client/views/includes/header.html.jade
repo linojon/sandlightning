@@ -1,7 +1,7 @@
 template(name='header')
   header
     meta(name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
-  nav.navbar.navbar-default
+  nav.navbar.navbar-default.navbar-fixed-top
     .container
       .navbar-header
         button.navbar-toggle(type="button" data-toggle="collapse" data-target="#navbar1")
@@ -13,9 +13,10 @@ template(name='header')
       .collapse.navbar-collapse(id="navbar1")
         ul.nav.navbar-nav.navbar-right
           li
-            a(href="{{pathFor 'homePage'}}") 
+            a(href="{{pathFor 'homePage'}}" data-toggle="collapse" data-target="#navbar1") 
               i.glyphicon.glyphicon-home
           li
-            a(href="{{pathFor 'forumsList'}}") Forums
+            a(href="{{pathFor 'forumsList'}}" data-toggle="collapse" data-target="#navbar1") Forums
+  div(style="height: 60px")
 
 
