@@ -10,3 +10,12 @@ template(name="talkShow")
       p
         small 
           em If you'd like to leave a comment or upvote this video, please click the small YouTube button at bottom right.
+      if prevTalk
+        p.pull-left
+          a.btn(href="{{pathFor 'talkShow' _id=prevTalk._id}}" style="font-size: 2em; color: #aaa" title="{{prevTalk.title}}") 
+            i.glyphicon.glyphicon-chevron-left
+      if nextTalk
+        p.pull-right
+          a.btn(href="{{pathFor 'talkShow' _id=nextTalk._id}}" style="font-size: 2em; color: #aaa" title="{{nextTalk.title}}") 
+            i.glyphicon.glyphicon-chevron-right
+

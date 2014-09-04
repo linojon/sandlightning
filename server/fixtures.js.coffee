@@ -4,7 +4,7 @@ if Forums.find().count() == 0
   Forums.insert(
     title: 'Linowes/ Alinsky/ Allen Family Summer Vacation'
     location: 'Cape Cod, Massachusetts'
-    date: '7/4/2014'
+    date: 'July 4, 2014'
   )
 
 # title, author, yt_url (andor yt_id), raw:bool, private:bool, 

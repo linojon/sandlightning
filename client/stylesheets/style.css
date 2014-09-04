@@ -3,7 +3,7 @@ ul.rules li {
   margin-bottom: 1em;
 }
 
-.talk-content a:hover * {
+.talk-content *:hover {
   text-decoration: none !important;
   color: #428BCA !important;
 }
