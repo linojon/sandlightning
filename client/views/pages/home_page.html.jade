@@ -6,9 +6,9 @@ template(name="homePage")
         p(style="text-align: left; font-weight: bold; font-size: larger") A. An evening of short "lighting talk" presentations by your family and friends!
         p
           a.btn.btn-primary.btn-block(href="{{pathFor 'aboutPage'}}") Learn More
-      .col-sm-4
+      .col-sm-4(style="text-align:center")
         .embed-responsive.embed-responsive-4by3
-          <iframe class="embed-responsive-item" src="//www.youtube.com/embed/A8pMb9JMKg0?autohide=1&showinfo=0&rel=0" width="640" height="390" allowfullscreen></iframe>
+          iframe.embed-responsive-item(src="//www.youtube.com/embed/A8pMb9JMKg0?controls=0&showinfo=0&rel=0")
 
 
   .spacer

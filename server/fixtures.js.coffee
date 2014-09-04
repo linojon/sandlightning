@@ -2,7 +2,7 @@
 
 if Forums.find().count() == 0
   Forums.insert(
-    title: 'Linowes/Alinsky/Allen Family Summer Vacation'
+    title: 'Linowes/ Alinsky/ Allen Family Summer Vacation'
     location: 'Cape Cod, Massachusetts'
     date: '7/4/2014'
   )

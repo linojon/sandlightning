@@ -50,7 +50,7 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 .jumbotron {
   background: #f0f0f0;
-  background-image: url(/204185.jpg); /* url(/Fulgurite-branch.jpg);  url(/EB0713FULG1D.jpg); */
+  background-image: url(204185.jpg);
   background-size: 100%;
   background-position: center center;
   background-repeat: no-repeat;
@@ -63,20 +63,21 @@ body, h1, h2, h3, h4, h5, h6 {
 .jumbotron h1 {
   background: #fff;
   display: inline-block;
-  font-size: 2em; /* 1.5em; */
+  font-size: 1.5em;
   margin-bottom: 0;
-  padding: 0 0.5em; /*0.5em;*/
+  padding: 0.5em;
   text-transform: uppercase;
+  font-weight: bold;
 }
 .jumbotron h2 {
   background: #fff;
   color: #333;
   display: inline-block;
-  font-size: 1em; /*0.75em;*/
+  font-size: 1.2em;
   font-weight: normal;
-  padding: 0.5em 1em; /*0.75em 1.1em;*/
+  padding: 0.25em 0.75em;
   line-height: 1.4em;
-  max-width: 66%;
+  max-width: 75%;
 }
 footer {
   background: #111;
