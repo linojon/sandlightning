@@ -26,7 +26,7 @@ if Talks.find().count() == 0
     position: 2
   )
   Talks.insert(
-    title: 'A Message to My Grandchildren'
+    title: 'My 92 Happy Years Begets Yours'
     author: 'Dorothy Linowes'
     yt_id: '9ts3ojDRxiU' 
     forumId: forum._id
