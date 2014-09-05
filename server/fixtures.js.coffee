@@ -1,7 +1,4 @@
-isDevEnv = true
-
 # title, date
-
 if Forums.find().count() == 0
   Forums.insert(
     title: 'Linowes/ Alinsky/ Allen Family Summer Vacation'
@@ -19,7 +16,7 @@ if Talks.find().count() == 0
     ytId: 'fuSBd--tWic' 
     forumId: forum._id
     position: 1
-    commentsCount: 1
+    commentsCount: 0
   )
   Talks.insert(
     title: 'A Short Walk Around the World'
@@ -110,19 +107,18 @@ if Talks.find().count() == 0
     commentsCount: 0
   )
 
-  if isDevEnv
-    # fake comments
-    now = new Date().getTime()
-    joeId = Meteor.users.insert(
-      profile: { name: 'Joe Example'}
-    )
-    joe = Meteor.users.findOne joeId
+  # # fake comments
+  # now = new Date().getTime()
+  # joeId = Meteor.users.insert(
+  #   profile: { name: 'Joe Example'}
+  # )
+  # joe = Meteor.users.findOne joeId
 
-    Comments.insert(
-      talkId: breadId
-      userId: joeId
-      author: joe.profile.name
-      submittedAt: now - 5 * 3600 * 1000
-      body: 'Very interesting and yummy!'
+  # Comments.insert(
+  #   talkId: breadId
+  #   userId: joeId
+  #   author: joe.profile.name
+  #   submittedAt: now - 5 * 3600 * 1000
+  #   body: 'Very interesting and yummy!'
 
-    )
+  # )
