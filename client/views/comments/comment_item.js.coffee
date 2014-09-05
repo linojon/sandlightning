@@ -1,3 +1,3 @@
 Template.commentItem.helpers(
-  submittedAtText: -> new Date(this.submittedAt).toString()
+  submittedAtText: -> new Date(this.submittedAt).toDateString()
 )

@@ -11,5 +11,5 @@ Meteor.publish 'talks', (forumId) ->
 # Meteor.publish 'singleTalk', (id) ->
 #   id && Talks.findOne(id) 
 
-Meteor.publish 'comments', ->
-  Comments.find()
+Meteor.publish 'comments', (talkId) ->
+  Comments.find( talkId: talkId )

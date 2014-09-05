@@ -4,7 +4,6 @@ Router.configure(
   waitOn: -> 
     [
       Meteor.subscribe('talks'), # todo: for forumId
-      Meteor.subscribe('comments') # todo: add commentsCount attribute to talk
     ]
 )
 
@@ -21,7 +20,7 @@ Router.map ->
       # Meteor.subscribe('forums')
       [
         Meteor.subscribe('forums'),
-        Meteor.subscribe('comments', {talkId: this.params_id})
+        Meteor.subscribe('comments', this.params._id)
       ]
   }
 

@@ -2,9 +2,9 @@ template(name="talkShow")
   .row
     .col-md-12
       p(style="margin: 1em 0;")
-        a.btn.btn-default(href="{{pathFor 'forumShow' _id=forumId}}") &larr; back to {{forum.title}}
+        a.btn.btn-default(href="{{pathFor 'forumShow' _id=forumId}}" style="white-space:normal") &larr; back to {{forum.title}}
       .embed-responsive.embed-responsive-4by3
-        <iframe class="embed-responsive-item" src="//www.youtube.com/embed/{{yt_id}}?autoplay=1&autohide=1&showinfo=0&rel=0" width="640" height="390" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" src="//www.youtube.com/embed/{{ytId}}?autoplay=1&autohide=1&showinfo=0&rel=0" width="640" height="390" allowfullscreen></iframe>
       h1 {{title}}
       h3 {{author}}
       p {{forum.date}}
@@ -19,7 +19,12 @@ template(name="talkShow")
       .clearfix
       hr
       h4 Comments
-      ul.comments
+      ul.list-group
+        li.list-group-item
+          if currentUser
+            +commentCreate
+          else
+            em Please log in to leave a comment.
         each comments
           +commentItem
 

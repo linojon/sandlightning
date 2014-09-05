@@ -1,6 +1,7 @@
 template(name="commentItem")
-  li
+  li.list-group-item
     strong
       span.author {{author}}
       span.date on {{submittedAtText}}
-    p {{body}}
+    br
+    | {{body}}

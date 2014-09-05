@@ -12,4 +12,4 @@ Template.talkShow.helpers
       Talks.findOne( position: this.position-1 )
 
   comments: ->
-    Comments.find( talkId: this._id )
+    Comments.find( talkId: this._id, {sort: {submittedAt: -1}} )

@@ -36,7 +36,9 @@ Meteor.methods(
     # pick out the whitelisted keys
     talk = _.extend(_.pick(talkAttributes, 'url', 'title', 'author', 'description'), 
       userId: user._id
-      submitted: new Date().getTime()
+      # author: user.username
+      submittedAt: new Date().getTime()
+      commentsCount: 0
     )
 
     talkId = Talks.insert talk

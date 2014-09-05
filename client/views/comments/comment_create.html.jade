@@ -1,0 +1,12 @@
+template(name="commentCreate")
+  form.comment-form(name="comment")
+    //- .panel.panel-default
+    //-   .panel-heading
+    //-     strong Comment on this talk
+    //-   .panel-body
+    //-     textarea(name="body" style="width: 100%")
+    //-     br
+    //-     button.btn(type="submit") Add Comment
+    textarea(name="body" style="width: 100%" placeholder="Write a comment...")
+    p(style="text-align:right")
+      button.btn.btn-default.btn-sm(type="submit") Add Comment
