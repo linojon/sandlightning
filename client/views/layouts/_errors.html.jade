@@ -1,9 +1,9 @@
-template(name="errors")
+template(name="_errors")
   .errors.row-fluid
     each errors
-      +error
+      +_error
 
-template(name="error")
+template(name="_error")
   .alert.alert-error
     button.close(type="button", data-dismiss="alert") &times;
     = message

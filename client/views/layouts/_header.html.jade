@@ -1,4 +1,4 @@
-template(name='header')
+template(name='_header')
   header
     meta(name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
   nav.navbar.navbar-default.navbar-fixed-top
@@ -17,6 +17,6 @@ template(name='header')
               i.glyphicon.glyphicon-home
           li
             a(href="{{pathFor 'forumsList'}}" data-toggle="collapse" data-target="#navbar1") Forums
+          +loginButtons
   div(style="height: 60px")
-
 

@@ -6,12 +6,12 @@
 standard-app-packages
 coffeescript
 sacha:spin@2.0.4
-mrt:accounts-ui-bootstrap-dropdown@0.8.3
-accounts-password
 blaze
 iron:router
 waitingkuo:jade
 mizzao:bootstrap-3
 meteorhacks:kadira
 spiderable
+accounts-password
+rajit:accounts-ui-bootstrap-3
 

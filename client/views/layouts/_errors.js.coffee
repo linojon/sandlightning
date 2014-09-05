@@ -1,6 +1,6 @@
-Template.errors.helpers
+Template._errors.helpers
   errors: -> Errors.find()
 
-Template.error.rendered = ->
+Template._error.rendered = ->
   error = this.data
   Meteor.defer -> Errors.update(error._id, {$set: {seen: true}})

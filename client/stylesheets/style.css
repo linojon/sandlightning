@@ -11,5 +11,16 @@ ul.rules li {
 #footer {
   margin-top: 6em;
   padding-top: 1em;
-  border-top: 1px solid #888;
+  border-top: 1px solid #aaa;
+}
+
+hr {
+  border-color: #ccc;
+  border-width: 4px;
+}
+
+@media (min-width: 768px) {
+#login-dropdown-list button{
+width: 90%;
+}
 }

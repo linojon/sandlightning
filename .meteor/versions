@@ -15,6 +15,7 @@ ejson@1.0.0
 email@1.0.2
 follower-livedata@1.0.0
 geojson-utils@1.0.0
+handlebars@1.0.0
 html-tools@1.0.0
 htmljs@1.0.0
 http@1.0.3
@@ -35,10 +36,10 @@ minifiers@1.0.2
 minimongo@1.0.1
 mizzao:bootstrap-3@3.2.0
 mongo-livedata@1.0.3
-mrt:accounts-ui-bootstrap-dropdown@0.8.3
 npm-bcrypt@0.7.7
 observe-sequence@1.0.1
 ordered-dict@1.0.0
+rajit:accounts-ui-bootstrap-3@0.3.10
 random@1.0.0
 reactive-dict@1.0.0
 reload@1.0.0
@@ -53,6 +54,7 @@ spacebars@1.0.0
 spiderable@1.0.2
 srp@1.0.0
 standard-app-packages@1.0.0
+stylus@1.0.3
 templating@1.0.4
 ui@1.0.0
 underscore@1.0.0
